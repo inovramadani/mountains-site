@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body style="height: 100vh; width: 100vw; overflow: hidden; background-image: url('mountain-3.jpg'); background-size: 100vw 100vh; background-repeat: no-repeat; background-position: center center;" class="relative flex-col justify-between w-lvw h-lvh">
+    <div class="w-full bg-white md:max-xl:h-40 sm:h-44">
+      <div class="lg:pr-56 lg:pl-56 sm:pr-4 sm:pl-4 pt-4">
+        <div class="flex justify-between items-center" >
+          <div class="relative md:max-xl:h-40 sm:h-44 flex-1 w-96">
+            <div class="text-slate-600 text-9xl font-sans inline inline-block">02.</div>
+            <div class="text-slate-800 absolute inline-block bottom-20 left-36 text-4xl">CLIMB</div>
+          </div>
+          <div class="text-slate-600 text-sm flex-4 lg:ms-24 max-md:hidden lg:h-full">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        </div>
+        <div class="text-slate-600 text-sm flex-4 sm:h-full md:hidden lg:hidden">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+      </div>
+
+      <div class="w-full bg-slate-600 h-10 -mt-4">
+        <div class="lg:pr-56 lg:pl-56 sm:pr-4 sm:pl-4 h-full">
+          <ul class="nav nav-pills h-full">
+            <li id="menu-1" class="nav-item active inline-block p-2 ps-4 pe-4">
+              <a class="nav-link active" aria-current="page" href="#1" onclick="handleClickTab1()">MOUNTAIN 1</a>
+            </li>
+            <li id="menu-2" class="nav-item inline-block p-2 ps-4 pe-4">
+              <a class="nav-link" href="#2" onclick="handleClickTab2()">MOUNTAIN 2</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="1">
+        <div class="lg:pr-56 lg:pl-56 sm:pr-4 sm:pl-4">
+          <div class="bg-white opacity-75 w-96 p-4 mt-32">
+            <div class="font-bold text-2xl">SCHEDULE</div>
+            <table class="table-auto text-sm w-full">
+              <tr>
+                <td>25 Nov 2016</td><td class="p-2">Vestibulum Viverra</td>
+              </tr>
+              <tr>
+                <td>28 Nov 2016</td><td class="p-2">Vestibulum Viverra</td>
+              </tr>
+              <tr>
+                <td>18 Dec 2016</td><td class="p-2">Vestibulum Viverra</td>
+              </tr>
+              <tr>
+                <td>7 Jan 2017</td><td class="p-2">Vestibulum Viverra</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="2" class="hidden">
+        <div class="lg:pr-56 lg:pl-56 sm:pr-4 sm:pl-4">
+          <div class="bg-white opacity-75 w-96 p-4 mt-32">
+            <div class="font-bold text-2xl">SCHEDULE 2</div>
+            <table class="table-auto text-sm w-full">
+              <tr>
+                <td>25 Feb 2018</td><td class="p-2">Vestibulum Viverra</td>
+              </tr>
+              <tr>
+                <td>28 Mar 2018</td><td class="p-2">Vestibulum Viverra</td>
+              </tr>
+              <tr>
+                <td>18 Apr 2018</td><td class="p-2">Vestibulum Viverra</td>
+              </tr>
+              <tr>
+                <td>7 Jun 2019</td><td class="p-2">Vestibulum Viverra</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute w-full bg-slate-800 h-16 bottom-0">
+      <div class="lg:pr-56 lg:pl-56 sm:pr-4 sm:pl-4 pt-4">
+        <div class="w-full m-auto flex items-stretch">
+          <div class="flex-1 md:max-xl:ml-16">
+            <a href="index.html">
+              <div class="flex items-start align-middle">
+                <div class="rounded-full border-solid border-2 border-slate-300 size-8 bg-white overflow-hidden">
+                    <img src="mountain-icon.png" />
+                  </div>
+                  <div class="w-24">
+                    <div class="text-slate-500 text-xs font-bold text-center">LOS ANGELES</div>
+                    <div class="text-slate-500 text-xs font-bold text-center">MOUNTAINS</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          <div class="flex items-center text-xs italic font-bold text-slate-500">
+            COPYRIGHT 2016. ALL RIGHTS RESERVED
+          </div>
+        </div>
+      <script>
+        const handleClickTab1 = () => {
+          document.getElementById('2').style.display = 'none'; 
+          document.getElementById('1').style.display = 'block';
+
+          const menu2 = document.getElementById('menu-2');
+          menu2.classList.remove('active');
+          menu2.getElementsByTagName('a')[0].classList.remove('active');
+
+          const menu1 = document.getElementById('menu-1');
+          menu1.classList.add('active');
+          menu1.getElementsByTagName('a')[0].classList.add('active');
+        }
+
+        const handleClickTab2 = () => {
+          document.getElementById('1').style.display = 'none'; 
+          document.getElementById('2').style.display = 'block';
+
+          const menu1 = document.getElementById('menu-1')
+          menu1.classList.remove('active');
+          menu1.getElementsByTagName('a')[0].classList.remove('active');
+
+          const menu2 = document.getElementById('menu-2')
+          menu2.classList.add('active');
+          menu2.getElementsByTagName('a')[0].classList.add('active');
+        }
+      </script>
+      <style>
+        .nav-item {
+          font-weight: bold;
+          color: lightgray;
+        }
+
+        .nav-item.active {
+          background: lightgray;
+
+        }
+
+        .nav-item a.active {
+          text-decoration: underline;
+          color: rgba(56, 57, 57, 0.819);
+        }
+      </style>
+  </body>
+</html>
+
+
